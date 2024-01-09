@@ -6,6 +6,8 @@ const inputEl = document.getElementById("search-input")
 const searchResults = document.querySelector(".search-results")
 const showMore = document.getElementById("show-more")
 const searchButton = document.getElementById("search-button")
+const darkbtn = document.querySelector(".dark")
+const anchorTag = document.querySelectorAll('.search-result');
 
 
 let inputData = ""
@@ -58,6 +60,26 @@ formEl.addEventListener("submit", (event) => {
 showMore.addEventListener("click", () => {
     searchImage()
 })
+
+darkbtn.addEventListener("click",()=>{
+
+    if(darkbtn.innerText === "dark_mode"){
+        darkbtn.innerText = "light_mode"
+        document.body.style.backgroundColor = "black"
+        document.body.style.color = "white"
+        anchorTag.style.backgroundColor = "red"
+      
+    }
+    else{
+        darkbtn.innerText = "dark_mode"
+        document.body.style.backgroundColor = "white"
+        document.body.style.color = "black"
+        anchorTag.style.backgroundColor = "black"
+        
+    }
+   
+})
+
 
 
 
